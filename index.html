@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Management System</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f7f9fc;
+      color: #3b4256;
+      margin: 0;
+      padding: 40px 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: transparent;
+      padding: 0 16px;
+    }
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5em;
+      text-align: center;
+      font-weight: 700;
+      background: linear-gradient(45deg, #4a90e2, #2f5a8d);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    h2 {
+      font-size: 1.6rem;
+      margin-top: 0;
+      margin-bottom: 1em;
+      color: #2a3346;
+    }
+    h3 {
+      font-size: 1.1rem;
+      margin-top: 1.5em;
+      margin-bottom: 0.3em;
+      font-weight: 600;
+    }
+    .intro-text {
+      text-align:center;
+      max-width:700px;
+      margin:0 auto 3em;
+      color:#5a6378;
+      line-height: 1.6;
+    }
+    .feature-section {
+      background: #fff;
+      padding: 2.5em;
+      border-radius: 15px;
+      margin-bottom: 2.5em;
+      box-shadow: 0 10px 30px rgba(41, 51, 71, 0.08);
+      border: 1px solid #eef2f7;
+    }
+    .img-placeholder, .feature-section > div[style*="display: flex"] {
+      margin-top: 2em;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    ul li {
+        padding-left: 1.8em;
+        position: relative;
+        margin-bottom: 0.8em;
+        line-height: 1.6;
+    }
+    ul li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #4a90e2;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+    
+    @media (max-width: 600px) {
+      body { padding: 20px 0; }
+      .container { padding: 0 8px; }
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.4rem; }
+      .feature-section { padding: 1.5em; }
+    }
+    .customization-note {
+      background: linear-gradient(45deg, #e3f2fd, #f0f8ff);
+      border-left: 5px solid #4a90e2;
+      padding: 25px 30px;
+      border-radius: 15px;
+      margin-top: 3em;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    .customization-note h3 {
+      margin-top: 0;
+      color: #2f5a8d;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>School Management System</h1>
+    <p class="intro-text">This document outlines the key features of the School Management System.</p>
+
+    <!-- User Management -->
+    <div class="feature-section">
+      <h2>User Management</h2>
+      <ul>
+        <li>Admins, teachers, and students can securely register, log in, and manage their profiles.</li>
+        <li>Role-based access ensures each user sees only the features relevant to them.</li>
+        <li>Admins can manage all users, including adding, editing, or removing accounts.</li>
+        <li>Modern dashboards and navigation tailored to each role.</li>
+      </ul>
+      <div class="img-placeholder" style="padding:0;overflow:hidden;height:auto;display:flex;gap:24px;flex-wrap:wrap;justify-content:center;align-items:center;">
+        <img src="images/login.png" alt="Login Page Screenshot" style="width:100%;max-width:340px;border-radius:8px;box-shadow:0 2px 8px rgba(79,140,255,0.10);border:1px solid #e3e7ed;" />
+        <img src="images/admin-dashboard.png" alt="Admin Dashboard Screenshot" style="width:100%;max-width:340px;border-radius:8px;box-shadow:0 2px 8px rgba(79,140,255,0.10);border:1px solid #e3e7ed;" />
+      </div>
+    </div>
+
+    <!-- Academic Management -->
+    <div class="feature-section">
+      <h2>Academic Management</h2>
+      <ul>
+        <li>Manage academic years, terms, class levels, programs, and subjects from a unified admin panel.</li>
+        <li>CRUD (Create, Read, Update, Delete) operations for all academic entities.</li>
+        <li>Organize students into year groups and classes for better academic tracking.</li>
+        <li>Frontend provides intuitive forms and lists for managing academic structures.</li>
+      </ul>
+      <div class="img-placeholder" style="padding:0;overflow:hidden;height:auto;display:flex;gap:24px;flex-wrap:wrap;justify-content:center;align-items:center;">
+        <img src="images/Schedule-Class-List.png" alt="Class List" style="width:100%;max-width:340px;border-radius:8px;box-shadow:0 2px 8px rgba(79,140,255,0.10);border:1px solid #e3e7ed;" />
+        <img src="images/Schedule-Class.png" alt="Class Scheduling" style="width:100%;max-width:340px;border-radius:8px;box-shadow:0 2px 8px rgba(79,140,255,0.10);border:1px solid #e3e7ed;" />
+        <img src="images/Manage-subjects.png" alt="Manage Subjects" style="width:100%;max-width:340px;border-radius:8px;box-shadow:0 2px 8px rgba(79,140,255,0.10);border:1px solid #e3e7ed;" />
+      </div>
+    </div>
+
+    <!-- Student Management -->
+    <div class="feature-section">
+      <h2>Student Management</h2>
+      <ul>
+        <li>Admins can register new students and manage their records.</li>
+        <li>Students have dedicated profile pages to view and update their information.</li>
+        <li>Student directory with search and filtering options for quick access.</li>
+        <li>Admin tools for editing or removing student records.</li>
+        <li>Student promotion management</li>
+      </ul>
+      <div class="img-placeholder" style="padding:0;overflow:hidden;height:auto;display:flex;gap:24px;flex-wrap:wrap;justify-content:center;align-items:center;">
+        <img src="images/students-dashboard.png" alt="Student Dashboard Screenshot" style="width:100%;max-width:340px;border-radius:8px;box-shadow:0 2px 8px rgba(79,140,255,0.10);border:1px solid #e3e7ed;" />
+        <img src="images/students-promotion.png" alt="Student Promotion Screenshot" style="width:100%;max-width:340px;border-radius:8px;box-shadow:0 2px 8px rgba(79,140,255,0.10);border:1px solid #e3e7ed;" />
+      </div>
+    </div>
+
+    <!-- Teacher Management -->
+    <div class="feature-section">
+      <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 32px;">
+        <div style="min-width:220px;display:flex;flex-direction:column;gap:16px;">
+          <img src="images/teachers-dashboard.png" alt="Teacher Dashboard Screenshot" style="width:100%;max-width:340px;border-radius:8px;box-shadow:0 2px 8px rgba(79,140,255,0.10);border:1px solid #e3e7ed;" />
+        </div>
+        <div style="flex: 1 1 320px; min-width: 260px;">
+          <h2>Teacher Management</h2>
+          <ul>
+            <li>Admins can add, view, and manage teacher accounts.</li>
+            <li>Teachers have profile pages and can update their information.</li>
+            <li>Teacher directory with search and filters for easy management.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Exam & Result Management -->
+    <div class="feature-section">
+      <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 32px; flex-direction: row-reverse;">
+        <div style="min-width:220px;display:flex;flex-direction:column;gap:16px;">
+          <img src="images/exam.png" alt="Exam and Result Dashboard Screenshot" style="width:100%;max-width:340px;border-radius:8px;box-shadow:0 2px 8px rgba(79,140,255,0.10);border:1px solid #e3e7ed;" />
+        </div>
+        <div style="flex: 1 1 320px; min-width: 260px;">
+          <h2>Exam & Result Management</h2>
+          <ul>
+            <li>Teachers can create, update, and manage exams and questions.</li>
+            <li>Students can take exams online through a secure interface.</li>
+            <li>Admins and teachers can publish/unpublish results; students can view their results.</li>
+            <li>Result dashboards and analytics for students and teachers.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Attendance Management -->
+    <div class="feature-section">
+      <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 32px;">
+        <div style="min-width:220px;display:flex;flex-direction:column;gap:16px;">
+          <img src="images/Student-attendance.png" alt="Student Attendance Screenshot" style="width:100%;max-width:340px;border-radius:8px;box-shadow:0 2px 8px rgba(79,140,255,0.10);border:1px solid #e3e7ed;" />
+        </div>
+        <div style="flex: 1 1 320px; min-width: 260px;">
+          <h2>Attendance Management</h2>
+          <ul>
+            <li>Track student attendance efficiently.</li>
+            <li>Attendance records can be managed by teachers and viewed by admins.</li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Class Routine/Timetable -->
+    <div class="feature-section">
+      <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 32px; flex-direction: row-reverse;">
+        <div style="min-width:220px;display:flex;flex-direction:column;gap:16px;">
+          <img src="images/class-routine.png" alt="Class Routine Screenshot" style="width:100%;max-width:340px;border-radius:8px;box-shadow:0 2px 8px rgba(79,140,255,0.10);border:1px solid #e3e7ed;" />
+        </div>
+        <div style="flex: 1 1 320px; min-width: 260px;">
+          <h2>Class Routine/Timetable</h2>
+          <ul>
+            <li>View and manage class routines and timetables.</li>
+            <li>Helps students and teachers stay organized.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notice Board -->
+    <div class="feature-section">
+      <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 32px;">
+        <div style="min-width:220px;display:flex;flex-direction:column;gap:16px;">
+          <img src="images/Notice-Board-Creation.png" alt="Notice Board Screenshot" style="width:100%;max-width:340px;border-radius:8px;box-shadow:0 2px 8px rgba(79,140,255,0.10);border:1px solid #e3e7ed;" />
+        </div>
+        <div style="flex: 1 1 320px; min-width: 260px;">
+          <h2>Notice Board</h2>
+          <ul>
+            <li>Admins and teachers can create and manage notices.</li>
+            <li>Students and parents can view important announcements.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Transport Management -->
+    <div class="feature-section">
+      <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 32px; flex-direction: row-reverse;">
+        <div style="min-width:220px;display:flex;flex-direction:column;gap:16px;">
+          <img src="images/Transport.png" alt="Transport Management Screenshot" style="width:100%;max-width:340px;border-radius:8px;box-shadow:0 2px 8px rgba(79,140,255,0.10);border:1px solid #e3e7ed;" />
+        </div>
+        <div style="flex: 1 1 320px; min-width: 260px;">
+          <h2>Transport Management</h2>
+          <ul>
+            <li>Manage school transport routes and vehicles.</li>
+            <li>Assign students to specific routes.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fees Collection -->
+    <div class="feature-section">
+      <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 32px;">
+        <div style="min-width:220px;display:flex;flex-direction:column;gap:16px;">
+          <img src="images/fees-collection.png" alt="Fees Collection Screenshot" style="width:100%;max-width:340px;border-radius:8px;box-shadow:0 2px 8px rgba(79,140,255,0.10);border:1px solid #e3e7ed;" />
+        </div>
+        <div style="flex: 1 1 320px; min-width: 260px;">
+          <h2>Fees Collection</h2>
+          <ul>
+            <li>Manage and track student fee payments.</li>
+            <li>Generate receipts and payment reports.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="customization-note">
+      <h3>A Note on Flexibility &amp; Customization</h3>
+      <p>This overview highlights our core features, but our capabilities don't end here. We are deeply committed to ensuring our system meets your unique requirements. Whether you need additional functionality, design adjustments, or a fully customized look and feel, we are flexible and eager to work with you to create the perfect solution for your institution.</p>
+    </div>
+
+  </div>
+</body>
+</html> 
