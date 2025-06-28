@@ -37,170 +37,206 @@
         .table-row-odd {
             background-color: #ffffff;
         }
+        
+        /* Responsive table styles */
+        .table-container {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        }
+        
+        .responsive-table {
+            min-width: 600px;
+        }
+        
+        /* Mobile-specific styles */
+        @media (max-width: 768px) {
+            .mobile-text-sm {
+                font-size: 0.875rem;
+            }
+            .mobile-text-xs {
+                font-size: 0.75rem;
+            }
+            .mobile-p-4 {
+                padding: 1rem;
+            }
+            .mobile-mx-2 {
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+            }
+        }
     </style>
 </head>
-<body class="p-4 sm:p-6 lg:p-8">
+<body class="p-2 sm:p-4 md:p-6 lg:p-8">
     <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
         <!-- Header Section -->
-        <header class="bg-purple-gradient text-white p-6 rounded-t-lg">
-            <h1 class="text-3xl sm:text-4xl font-bold mb-2">Quotation for School Management System Web</h1>
+        <header class="bg-purple-gradient text-white p-4 sm:p-6 rounded-t-lg">
+            <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 text-center sm:text-left">Quotation for School Management System Web</h1>
         </header>
 
         <!-- Project Overview -->
-        <section class="p-6">
-            <h3 class="text-2xl font-bold mb-4 text-gray-800">Project Overview</h3>
-            <p class="text-gray-700 leading-relaxed">
+        <section class="p-4 sm:p-6">
+            <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gray-800">Project Overview</h3>
+            <p class="text-sm sm:text-base text-gray-700 leading-relaxed">
                 This document outlines the estimated costs and features for the development and deployment of a comprehensive web-based School Management System. The system will streamline administrative, academic, and communication processes for schools, providing secure, role-based access for admins, teachers, and students. The solution is tailored for Indian institutions and includes all essential modules for modern school operations.
             </p>
         </section>
 
-        <hr class="border-t border-aqua-green mx-6 my-4">
+        <hr class="border-t border-aqua-green mx-4 sm:mx-6 my-4">
 
         <!-- Project Estimation: Task & Module Breakdown -->
-        <section class="p-6">
-            <h3 class="text-2xl font-bold mb-4 text-gray-800">1. Project Estimation: Task & Module Breakdown</h3>
-            <table class="min-w-full divide-y divide-gray-200 mb-4">
-                <thead class="table-header">
-                    <tr>
-                        <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider rounded-tl-lg">Module</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Detailed Description</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider rounded-tr-lg">Estimated Effort</th>
-                    </tr>
-                </thead>
-                <tbody class="divide-y divide-gray-200">
-                    <tr class="table-row-even">
-                        <td class="px-6 py-4 font-semibold">User Management</td>
-                        <td class="px-6 py-4">User registration and authentication, password management, role-based access control, profile management for all user types, admin dashboard for user oversight, audit logs, and security best practices implementation.</td>
-                        <td class="px-6 py-4">42 hrs</td>
-                    </tr>
-                    <tr class="table-row-odd">
-                        <td class="px-6 py-4 font-semibold">Academic Management</td>
-                        <td class="px-6 py-4">Setup and management of academic years, terms, class levels, programs, and subjects. CRUD operations for all academic entities, validation, bulk import/export, and user-friendly admin interfaces for academic structuring.</td>
-                        <td class="px-6 py-4">37 hrs</td>
-                    </tr>
-                    <tr class="table-row-even">
-                        <td class="px-6 py-4 font-semibold">Student Management</td>
-                        <td class="px-6 py-4">Student registration forms, profile management, directory with advanced search and filtering, student promotion workflows, admin tools for editing/removal, and secure data handling for student records.</td>
-                        <td class="px-6 py-4">32 hrs</td>
-                    </tr>
-                    <tr class="table-row-odd">
-                        <td class="px-6 py-4 font-semibold">Teacher Management</td>
-                        <td class="px-6 py-4">Teacher onboarding, profile management, directory with search and filters, admin tools for account management, and secure access to relevant modules and data.</td>
-                        <td class="px-6 py-4">27 hrs</td>
-                    </tr>
-                    <tr class="table-row-even">
-                        <td class="px-6 py-4 font-semibold">Exam & Result Management</td>
-                        <td class="px-6 py-4">Exam creation and scheduling, question bank management, secure online exam interface, result calculation and publishing, analytics dashboards for performance tracking, and exportable reports.</td>
-                        <td class="px-6 py-4">37 hrs</td>
-                    </tr>
-                    <tr class="table-row-odd">
-                        <td class="px-6 py-4 font-semibold">Attendance Management</td>
-                        <td class="px-6 py-4">Manual and automated (RFID/QR/Barcode) attendance recording, real-time attendance dashboard, reporting tools, notifications for absentees, and integration with student/teacher profiles.</td>
-                        <td class="px-6 py-4">32 hrs</td>
-                    </tr>
-                    <tr class="table-row-even">
-                        <td class="px-6 py-4 font-semibold">Class Routine/Timetable</td>
-                        <td class="px-6 py-4">Timetable creation and editing, conflict detection, calendar integration, and user-friendly views for students and teachers.</td>
-                        <td class="px-6 py-4">22 hrs</td>
-                    </tr>
-                    <tr class="table-row-odd">
-                        <td class="px-6 py-4 font-semibold">Notice Board</td>
-                        <td class="px-6 py-4">Notice creation and management, scheduling, targeted announcements, and notification integration for students and parents.</td>
-                        <td class="px-6 py-4">17 hrs</td>
-                    </tr>
-                    <tr class="table-row-even">
-                        <td class="px-6 py-4 font-semibold">Transport Management</td>
-                        <td class="px-6 py-4">Route and vehicle management, student assignment to routes, driver and vehicle records, and transport schedule generation.</td>
-                        <td class="px-6 py-4">17 hrs</td>
-                    </tr>
-                    <tr class="table-row-odd">
-                        <td class="px-6 py-4 font-semibold">Fees Collection</td>
-                        <td class="px-6 py-4">Fee structure setup, payment tracking, receipt generation, overdue reminders, and financial reporting for admins.</td>
-                        <td class="px-6 py-4">17 hrs</td>
-                    </tr>
-                    <tr class="bg-aqua-green-light font-bold">
-                        <td class="px-6 py-3" colspan="2">Total Estimated Effort</td>
-                        <td class="px-6 py-3">280 hrs</td>
-                    </tr>
-                    <tr class="bg-purple-light font-bold">
-                        <td class="px-6 py-3" colspan="3">Total Estimated Duration: 7 weeks (assuming 40 hours/week)</td>
-                    </tr>
-                </tbody>
-            </table>
-        
+        <section class="p-4 sm:p-6">
+            <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gray-800">1. Project Estimation: Task & Module Breakdown</h3>
+            <div class="table-container">
+                <table class="responsive-table min-w-full divide-y divide-gray-200 mb-4">
+                    <thead class="table-header">
+                        <tr>
+                            <th class="px-3 sm:px-6 py-2 sm:py-3 text-left text-xs font-medium uppercase tracking-wider rounded-tl-lg">Module</th>
+                            <th class="px-3 sm:px-6 py-2 sm:py-3 text-left text-xs font-medium uppercase tracking-wider">Detailed Description</th>
+                            <th class="px-3 sm:px-6 py-2 sm:py-3 text-left text-xs font-medium uppercase tracking-wider rounded-tr-lg">Estimated Effort</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="table-row-even">
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 font-semibold text-sm sm:text-base">User Management</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm">User registration and authentication, password management, role-based access control, profile management for all user types, admin dashboard for user oversight, audit logs, and security best practices implementation.</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">42 hrs</td>
+                        </tr>
+                        <tr class="table-row-odd">
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 font-semibold text-sm sm:text-base">Academic Management</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm">Setup and management of academic years, terms, class levels, programs, and subjects. CRUD operations for all academic entities, validation, bulk import/export, and user-friendly admin interfaces for academic structuring.</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">37 hrs</td>
+                        </tr>
+                        <tr class="table-row-even">
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 font-semibold text-sm sm:text-base">Student Management</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm">Student registration forms, profile management, directory with advanced search and filtering, student promotion workflows, admin tools for editing/removal, and secure data handling for student records.</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">32 hrs</td>
+                        </tr>
+                        <tr class="table-row-odd">
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 font-semibold text-sm sm:text-base">Teacher Management</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm">Teacher onboarding, profile management, directory with search and filters, admin tools for account management, and secure access to relevant modules and data.</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">27 hrs</td>
+                        </tr>
+                        <tr class="table-row-even">
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 font-semibold text-sm sm:text-base">Exam & Result Management</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm">Exam creation and scheduling, question bank management, secure online exam interface, result calculation and publishing, analytics dashboards for performance tracking, and exportable reports.</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">37 hrs</td>
+                        </tr>
+                        <tr class="table-row-odd">
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 font-semibold text-sm sm:text-base">Attendance Management</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm">Manual and automated (RFID/QR/Barcode) attendance recording, real-time attendance dashboard, reporting tools, notifications for absentees, and integration with student/teacher profiles.</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">32 hrs</td>
+                        </tr>
+                        <tr class="table-row-even">
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 font-semibold text-sm sm:text-base">Class Routine/Timetable</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm">Timetable creation and editing, conflict detection, calendar integration, and user-friendly views for students and teachers.</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">22 hrs</td>
+                        </tr>
+                        <tr class="table-row-odd">
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 font-semibold text-sm sm:text-base">Notice Board</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm">Notice creation and management, scheduling, targeted announcements, and notification integration for students and parents.</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">17 hrs</td>
+                        </tr>
+                        <tr class="table-row-even">
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 font-semibold text-sm sm:text-base">Transport Management</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm">Route and vehicle management, student assignment to routes, driver and vehicle records, and transport schedule generation.</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">17 hrs</td>
+                        </tr>
+                        <tr class="table-row-odd">
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 font-semibold text-sm sm:text-base">Fees Collection</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm">Fee structure setup, payment tracking, receipt generation, overdue reminders, and financial reporting for admins.</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">17 hrs</td>
+                        </tr>
+                        <tr class="bg-aqua-green-light font-bold">
+                            <td class="px-3 sm:px-6 py-2 sm:py-3 text-sm sm:text-base" colspan="2">Total Estimated Effort</td>
+                            <td class="px-3 sm:px-6 py-2 sm:py-3 text-sm sm:text-base">280 hrs</td>
+                        </tr>
+                        <tr class="bg-purple-light font-bold">
+                            <td class="px-3 sm:px-6 py-2 sm:py-3 text-sm sm:text-base" colspan="3">Total Estimated Duration: 7 weeks (assuming 40 hours/week)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
-        <hr class="border-t border-aqua-green mx-6 my-4">
+        <hr class="border-t border-aqua-green mx-4 sm:mx-6 my-4">
 
         <!-- Web Application Development Cost -->
-        <section class="p-6">
-            <h3 class="text-2xl font-bold mb-4 text-gray-800">2. Web Application Development Cost</h3>
-            <table class="min-w-full divide-y divide-gray-200 mb-4">
-                <thead class="table-header">
-                    <tr>
-                        <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider rounded-tl-lg">Component</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Description</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider rounded-tr-lg">Cost (INR)</th>
-                    </tr>
-                </thead>
-                <tbody class="divide-y divide-gray-200">
-                    <tr class="table-row-even">
-                        <td class="px-6 py-4 font-semibold">Core Web Application</td>
-                        <td class="px-6 py-4">All modules, design, development, deployment, support</td>
-                        <td class="px-6 py-4">₹3,95,000</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p class="text-gray-700 leading-relaxed mb-2"><strong>Note:</strong> The above hours and cost estimation are for the web application development only, including all modules, design, development, testing, and deployment. Costs for domain, hosting, messaging, and other third-party services are listed separately below.</p>
+        <section class="p-4 sm:p-6">
+            <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gray-800">2. Web Application Development Cost</h3>
+            <div class="table-container">
+                <table class="responsive-table min-w-full divide-y divide-gray-200 mb-4">
+                    <thead class="table-header">
+                        <tr>
+                            <th class="px-3 sm:px-6 py-2 sm:py-3 text-left text-xs font-medium uppercase tracking-wider rounded-tl-lg">Component</th>
+                            <th class="px-3 sm:px-6 py-2 sm:py-3 text-left text-xs font-medium uppercase tracking-wider">Description</th>
+                            <th class="px-3 sm:px-6 py-2 sm:py-3 text-left text-xs font-medium uppercase tracking-wider rounded-tr-lg">Cost (INR)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="table-row-even">
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 font-semibold text-sm sm:text-base">Core Web Application</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm">All modules, design, development, deployment, support</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">₹3,95,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-xs sm:text-sm text-gray-700 leading-relaxed mb-2"><strong>Note:</strong> The above hours and cost estimation are for the web application development only, including all modules, design, development, testing, and deployment. Costs for domain, hosting, messaging, and other third-party services are listed separately below.</p>
         </section>
 
-        <hr class="border-t border-aqua-green mx-6 my-4">
+        <hr class="border-t border-aqua-green mx-4 sm:mx-6 my-4">
 
         <!-- Other Tentative Costs -->
-        <section class="p-6">
-            <h3 class="text-2xl font-bold mb-4 text-gray-800">3. Other Tentative Costs</h3>
-            <table class="min-w-full divide-y divide-gray-200 mb-4">
-                <thead class="table-header">
-                    <tr>
-                        <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider rounded-tl-lg">Component</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Description</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider rounded-tr-lg">Tentative Cost (INR)</th>
-                    </tr>
-                </thead>
-                <tbody class="divide-y divide-gray-200">
-                    <tr class="table-row-odd">
-                        <td class="px-6 py-4 font-semibold">Domain Registration</td>
-                        <td class="px-6 py-4">.in/.com domain for 1 year (approximate)</td>
-                        <td class="px-6 py-4">₹1,200</td>
-                    </tr>
-                    <tr class="table-row-even">
-                        <td class="px-6 py-4 font-semibold">Web Hosting</td>
-                        <td class="px-6 py-4">Cloud/VPS hosting for 1 year</td>
-                        <td class="px-6 py-4">₹15,000</td>
-                    </tr>
-                    <tr class="table-row-odd">
-                        <td class="px-6 py-4 font-semibold">Messaging Service</td>
-                        <td class="px-6 py-4">WhatsApp/SMS/Push notification integration (API credits, setup)</td>
-                        <td class="px-6 py-4">₹20,000</td>
-                    </tr>
-                    <tr class="table-row-even">
-                        <td class="px-6 py-4 font-semibold">Contingency & Miscellaneous</td>
-                        <td class="px-6 py-4">Buffer for unforeseen requirements</td>
-                        <td class="px-6 py-4">₹14,000</td>
-                    </tr>
-                    <tr class="bg-aqua-green-light font-bold">
-                        <td class="px-6 py-3" colspan="2">Total (Approximate)</td>
-                        <td class="px-6 py-3">₹50,000</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p class="text-gray-700 leading-relaxed mb-4">*All costs are indicative and may vary based on final requirements, technology stack, and third-party service pricing. Messaging costs are based on estimated usage and may require additional credits for high volume.</p>
+        <section class="p-4 sm:p-6">
+            <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gray-800">3. Other Tentative Costs</h3>
+            <div class="table-container">
+                <table class="responsive-table min-w-full divide-y divide-gray-200 mb-4">
+                    <thead class="table-header">
+                        <tr>
+                            <th class="px-3 sm:px-6 py-2 sm:py-3 text-left text-xs font-medium uppercase tracking-wider rounded-tl-lg">Component</th>
+                            <th class="px-3 sm:px-6 py-2 sm:py-3 text-left text-xs font-medium uppercase tracking-wider">Description</th>
+                            <th class="px-3 sm:px-6 py-2 sm:py-3 text-left text-xs font-medium uppercase tracking-wider rounded-tr-lg">Tentative Cost (INR)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="table-row-odd">
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 font-semibold text-sm sm:text-base">Domain Registration</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm">.in/.com domain for 1 year (approximate)</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">₹1,200</td>
+                        </tr>
+                        <tr class="table-row-even">
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 font-semibold text-sm sm:text-base">Web Hosting</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm">Cloud/VPS hosting for 1 year</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">₹15,000</td>
+                        </tr>
+                        <tr class="table-row-odd">
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 font-semibold text-sm sm:text-base">Messaging Service</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm">WhatsApp/SMS/Push notification integration (API credits, setup)</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">₹20,000</td>
+                        </tr>
+                        <tr class="table-row-even">
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 font-semibold text-sm sm:text-base">Contingency & Miscellaneous</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm">Buffer for unforeseen requirements</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">₹14,000</td>
+                        </tr>
+                        <tr class="bg-aqua-green-light font-bold">
+                            <td class="px-3 sm:px-6 py-2 sm:py-3 text-sm sm:text-base" colspan="2">Total (Approximate)</td>
+                            <td class="px-3 sm:px-6 py-2 sm:py-3 text-sm sm:text-base">₹50,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-xs sm:text-sm text-gray-700 leading-relaxed mb-4">*All costs are indicative and may vary based on final requirements, technology stack, and third-party service pricing. Messaging costs are based on estimated usage and may require additional credits for high volume.</p>
         </section>
-        <hr class="border-t border-aqua-green mx-6 my-4">
+        
+        <hr class="border-t border-aqua-green mx-4 sm:mx-6 my-4">
+        
         <!-- Cost Justification -->
-        <section class="p-6">
-            <h3 class="text-2xl font-bold mb-4 text-gray-800">4. Cost Justification</h3>
-            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+        <section class="p-4 sm:p-6">
+            <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gray-800">4. Cost Justification</h3>
+            <ul class="list-disc pl-4 sm:pl-5 space-y-2 text-xs sm:text-sm text-gray-700">
                 <li><strong>Effort-Based:</strong> 280 hours of skilled work, mapped to each feature/module, ensures thorough development and quality.</li>
                 <li><strong>Competitive Rate:</strong> Priced at industry-standard rates for professional web development in India.</li>
                 <li><strong>Comprehensive Coverage:</strong> Includes all modules, modern UI/UX, security, testing, deployment, and initial support—no hidden costs.</li>
@@ -209,45 +245,48 @@
             </ul>
         </section>
 
-        <hr class="border-t border-aqua-green mx-6 my-4">
+        <hr class="border-t border-aqua-green mx-4 sm:mx-6 my-4">
+        
         <!-- Maintenance & Support Section -->
-        <section class="p-6">
-            <h3 class="text-2xl font-bold mb-4 text-gray-800">5. Long-Term Maintenance & Support</h3>
-            <p class="text-gray-700 leading-relaxed mb-4">
+        <section class="p-4 sm:p-6">
+            <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gray-800">5. Long-Term Maintenance & Support</h3>
+            <p class="text-xs sm:text-sm text-gray-700 leading-relaxed mb-4">
                 We also provide long-term maintenance and support. Flexible plans are available as per your needs:
             </p>
-            <table class="min-w-full divide-y divide-gray-200 mb-4">
-                <thead class="table-header">
-                    <tr>
-                        <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider rounded-tl-lg">Plan Duration</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Price (INR)</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider rounded-tr-lg">You Save</th>
-                    </tr>
-                </thead>
-                <tbody class="divide-y divide-gray-200">
-                    <tr class="table-row-even">
-                        <td class="px-6 py-4 font-semibold">1 Month</td>
-                        <td class="px-6 py-4">₹20,000</td>
-                        <td class="px-6 py-4">-</td>
-                    </tr>
-                    <tr class="table-row-odd">
-                        <td class="px-6 py-4 font-semibold">3 Months</td>
-                        <td class="px-6 py-4">₹54,000</td>
-                        <td class="px-6 py-4">₹6,000</td>
-                    </tr>
-                    <tr class="table-row-even">
-                        <td class="px-6 py-4 font-semibold">6 Months</td>
-                        <td class="px-6 py-4">₹1,00,000</td>
-                        <td class="px-6 py-4">₹20,000</td>
-                    </tr>
-                    <tr class="table-row-odd">
-                        <td class="px-6 py-4 font-semibold">1 Year</td>
-                        <td class="px-6 py-4">₹1,80,000</td>
-                        <td class="px-6 py-4">₹60,000</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p class="text-gray-700 leading-relaxed text-sm">*Longer plans offer significant savings. Maintenance includes bug fixes, security updates, minor feature enhancements, and technical support. Custom plans available on request.</p>
+            <div class="table-container">
+                <table class="responsive-table min-w-full divide-y divide-gray-200 mb-4">
+                    <thead class="table-header">
+                        <tr>
+                            <th class="px-3 sm:px-6 py-2 sm:py-3 text-left text-xs font-medium uppercase tracking-wider rounded-tl-lg">Plan Duration</th>
+                            <th class="px-3 sm:px-6 py-2 sm:py-3 text-left text-xs font-medium uppercase tracking-wider">Price (INR)</th>
+                            <th class="px-3 sm:px-6 py-2 sm:py-3 text-left text-xs font-medium uppercase tracking-wider rounded-tr-lg">You Save</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="table-row-even">
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 font-semibold text-sm sm:text-base">1 Month</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">₹20,000</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">-</td>
+                        </tr>
+                        <tr class="table-row-odd">
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 font-semibold text-sm sm:text-base">3 Months</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">₹54,000</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">₹6,000</td>
+                        </tr>
+                        <tr class="table-row-even">
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 font-semibold text-sm sm:text-base">6 Months</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">₹1,00,000</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">₹20,000</td>
+                        </tr>
+                        <tr class="table-row-odd">
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 font-semibold text-sm sm:text-base">1 Year</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">₹1,80,000</td>
+                            <td class="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">₹60,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">*Longer plans offer significant savings. Maintenance includes bug fixes, security updates, minor feature enhancements, and technical support. Custom plans available on request.</p>
         </section>
 
     </div>
