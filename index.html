@@ -87,6 +87,9 @@
       h1 { font-size: 2rem; }
       h2 { font-size: 1.4rem; }
       .feature-section { padding: 1.5em; }
+      .img-placeholder img {
+        max-width: 100%;
+      }
     }
     .customization-note {
       background: linear-gradient(45deg, #e3f2fd, #f0f8ff);
@@ -101,14 +104,51 @@
       color: #2f5a8d;
     }
     .img-placeholder img {
-        max-width: 48%;
+      max-width: 48%;
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(79,140,255,0.10);
+      border: 1px solid #e3e7ed;
+      margin-bottom: 12px;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>School Management System</h1>
-    <p class="intro-text">This document outlines the key features of the School Management System.</p>
+    <p class="intro-text">
+      This document outlines the key features of the School Management System, including multi-branch management, role-based access, student and teacher management, exams, fees, and more.
+    </p>
+
+    <!-- Multi-Branch Management -->
+    <div class="feature-section">
+      <h2>Multi-Branch Management</h2>
+      <ul>
+        <li>Centralized SuperAdmin control over multiple schools/branches.</li>
+        <li>Branch Admin manages branch-specific data, staff, and students.</li>
+        <li>Data isolation between branches for confidentiality and security.</li>
+        <li>Custom domain and URL for each branch (examples provided).</li>
+      </ul>
+      <div class="img-placeholder">
+        <img src="images/admin-dashboard.png" alt="SuperAdmin Dashboard Screenshot">
+        <img src="images/login.png" alt="Branch Admin Login Screenshot">
+      </div>
+    </div>
+
+    <!-- User Roles & Access -->
+    <div class="feature-section">
+      <h2>User Roles &amp; Access</h2>
+      <ul>
+        <li>SuperAdmin with full system control.</li>
+        <li>Branch Admin and Staff with restricted access.</li>
+        <li>Student and Parent panels with configurable login enable/disable.</li>
+        <li>Receptionist and other staff roles with specific permissions.</li>
+        <li>Role and permission management system.</li>
+      </ul>
+      <div class="img-placeholder">
+        <img src="images/login.png" alt="User Login Screenshot">
+      </div>
+    </div>
 
     <!-- User Management -->
     <div class="feature-section">
@@ -119,9 +159,9 @@
         <li>Admins can manage all users, including adding, editing, or removing accounts.</li>
         <li>Modern dashboards and navigation tailored to each role.</li>
       </ul>
-      <div class="img-placeholder" style="padding:0;overflow:hidden;height:auto;display:flex;gap:24px;flex-wrap:wrap;justify-content:center;align-items:center;">
-        <img src="images/login.png" alt="Login Page Screenshot" style="width:100%;max-width:340px;border-radius:8px;box-shadow:0 2px 8px rgba(79,140,255,0.10);border:1px solid #e3e7ed;">
-        <img src="images/admin-dashboard.png" alt="Admin Dashboard Screenshot" style="width:100%;max-width:340px;border-radius:8px;box-shadow:0 2px 8px rgba(79,140,255,0.10);border:1px solid #e3e7ed;">
+      <div class="img-placeholder">
+        <img src="images/login.png" alt="Login Page Screenshot">
+        <img src="images/admin-dashboard.png" alt="Admin Dashboard Screenshot">
       </div>
     </div>
 
@@ -134,26 +174,31 @@
         <li>Organize students into year groups and classes for better academic tracking.</li>
         <li>Frontend provides intuitive forms and lists for managing academic structures.</li>
       </ul>
-      <div class="img-placeholder" style="padding:0;overflow:hidden;height:auto;display:flex;gap:24px;flex-wrap:wrap;justify-content:center;align-items:center;">
-        <img src="images/Schedule-Class-List.png" alt="Class List" style="width:100%;border-radius:8px;box-shadow:0 2px 8px rgba(79,140,255,0.10);border:1px solid #e3e7ed;">
-        <img src="images/Schedule-Class.png" alt="Class Scheduling" style="width:100%;border-radius:8px;box-shadow:0 2px 8px rgba(79,140,255,0.10);border:1px solid #e3e7ed;">
-        <img src="images/Manage-subjects.png" alt="Manage Subjects" style="width:100%;border-radius:8px;box-shadow:0 2px 8px rgba(79,140,255,0.10);border:1px solid #e3e7ed;">
+      <div class="img-placeholder">
+        <img src="images/Schedule-Class-List.png" alt="Class List">
+        <img src="images/Schedule-Class.png" alt="Class Scheduling">
+        <img src="images/Manage-subjects.png" alt="Manage Subjects">
       </div>
     </div>
 
-    <!-- Student Management -->
+    <!-- Student Information & Management -->
     <div class="feature-section">
-      <h2>Student Management</h2>
+      <h2>Student Information &amp; Management</h2>
       <ul>
-        <li>Admins can register new students and manage their records.</li>
-        <li>Students have dedicated profile pages to view and update their information.</li>
-        <li>Student directory with search and filtering options for quick access.</li>
+        <li>Student registration, profile management, and document uploads.</li>
+        <li>Customizable fields for student and admission data.</li>
+        <li>Multi-class student handling.</li>
+        <li>Sibling information displayed on student profiles.</li>
+        <li>Student promotion with history tracking.</li>
+        <li>Disable student functionality with a reason.</li>
+        <li>Student leave and leave request management.</li>
+        <li>Student directory with search and filtering options.</li>
         <li>Admin tools for editing or removing student records.</li>
-        <li>Student promotion management</li>
+        <li>Student promotion management.</li>
       </ul>
-      <div class="img-placeholder" style="padding:0;overflow:hidden;height:auto;display:flex;gap:24px;flex-wrap:wrap;justify-content:center;align-items:center;">
-        <img src="images/students-dashboard.png" alt="Student Dashboard Screenshot" style="width:100%;/* max-width:340px; */border-radius:8px;box-shadow:0 2px 8px rgba(79,140,255,0.10);border:1px solid #e3e7ed;">
-        <img src="images/students-promotion.png" alt="Student Promotion Screenshot" style="width:100%;/* max-width:340px; */border-radius:8px;box-shadow:0 2px 8px rgba(79,140,255,0.10);border:1px solid #e3e7ed;">
+      <div class="img-placeholder">
+        <img src="images/students-dashboard.png" alt="Student Dashboard Screenshot">
+        <img src="images/students-promotion.png" alt="Student Promotion Screenshot">
       </div>
     </div>
 
@@ -165,35 +210,110 @@
         <li>Teachers have profile pages and can update their information.</li>
         <li>Teacher directory with search and filters for easy management.</li>
       </ul>
-      <div class="img-placeholder" style="padding:0;overflow:hidden;height:auto;display:flex;gap:24px;flex-wrap:wrap;justify-content:center;align-items:center;">
-        <img src="images/teachers-dashboard.png" alt="Teacher Dashboard Screenshot" style="width:100%;max-width: 100%;border-radius:8px;box-shadow:0 2px 8px rgba(79,140,255,0.10);border:1px solid #e3e7ed;">
+      <div class="img-placeholder">
+        <img src="images/teachers-dashboard.png" alt="Teacher Dashboard Screenshot">
       </div>
     </div>
 
     <!-- Exam & Result Management -->
     <div class="feature-section">
-      <h2>Exam &amp; Result Management</h2>
+      <h2>Examination &amp; Results</h2>
       <ul>
-        <li>Teachers can create, update, and manage exams and questions.</li>
-        <li>Students can take exams online through a secure interface.</li>
-        <li>Admins and teachers can publish/unpublish results; students can view their results.</li>
+        <li>Multiple exam setups (Marks, GPA, Marks &amp; GPA).</li>
+        <li>Exam scheduling and status management.</li>
+        <li>Position/rank management in exams.</li>
+        <li>Online exams with CSV import of questions.</li>
+        <li>Report cards with customizable remarks and principal/teacher comments.</li>
+        <li>Exam progress reports showing cumulative averages and positions.</li>
+        <li>Exam results publication with enable/disable options.</li>
+        <li>Online exam fee payment feature.</li>
+        <li>Support for multiple exam types including tabulation sheets.</li>
         <li>Result dashboards and analytics for students and teachers.</li>
       </ul>
-      <div class="img-placeholder" style="padding:0;overflow:hidden;height:auto;display:flex;gap:24px;flex-wrap:wrap;justify-content:center;align-items:center;">
-        <img src="images/exam.png" alt="Exam and Result Dashboard Screenshot" style="width:100%;max-width: 100%;border-radius:8px;box-shadow:0 2px 8px rgba(79,140,255,0.10);border:1px solid #e3e7ed;">
+      <div class="img-placeholder">
+        <img src="images/exam.png" alt="Exam and Result Dashboard Screenshot">
       </div>
     </div>
 
-    <!-- Attendance Management -->
+    <!-- Attendance -->
     <div class="feature-section">
-      <h2>Attendance Management</h2>
+      <h2>Attendance</h2>
       <ul>
-        <li>Track student attendance efficiently.</li>
+        <li>Subject-wise attendance tracking.</li>
+        <li>QR Code attendance addon support.</li>
+        <li>Daily and overview attendance reports.</li>
+        <li>Attendance percentage in reports.</li>
+        <li>Half-day attendance option and automatic holiday status.</li>
+        <li>Attendance linked to events and holidays.</li>
+        <li>Student panel attendance view with restrictions.</li>
         <li>Attendance records can be managed by teachers and viewed by admins.</li>
-        <li>Manual and automated (RFID/QR/Barcode) attendance recording</li>
+        <li>Manual and automated (RFID/QR/Barcode) attendance recording.</li>
       </ul>
-      <div class="img-placeholder" style="padding:0;overflow:hidden;height:auto;display:flex;gap:24px;flex-wrap:wrap;justify-content:center;align-items:center;">
-        <img src="images/Student-attendance.png" alt="Student Attendance Screenshot" style="width:100%;/* max-width:340px; */border-radius:8px;box-shadow:0 2px 8px rgba(79,140,255,0.10);border:1px solid #e3e7ed;">
+      <div class="img-placeholder">
+        <img src="images/Student-attendance.png" alt="Student Attendance Screenshot">
+      </div>
+    </div>
+
+    <!-- Fee Management -->
+    <div class="feature-section">
+      <h2>Fee Management</h2>
+      <ul>
+        <li>Student fee collection with multiple fee support.</li>
+        <li>Offline and online fee payment gateways including Razorpay, Paytm (India), Flutterwave, Toyyibpay (Malaysia), Payhere (Sri Lanka), Midtrans (Indonesia), Jazzcash (Pakistan), SSLcommerz (Bangladesh).</li>
+        <li>Fee reminders with SMS and DLT template support.</li>
+        <li>Fee revert feature linked with office accounting.</li>
+        <li>Carry-forward due fees across sessions.</li>
+        <li>Multiple receipt copies printing.</li>
+        <li>Invoice and payment ID customization.</li>
+        <li>Manage and track student fee payments.</li>
+        <li>Generate receipts and payment reports.</li>
+      </ul>
+      <div class="img-placeholder">
+        <img src="images/fees-collection.png" alt="Fees Collection Screenshot">
+      </div>
+    </div>
+
+    <!-- Communication & Notifications -->
+    <div class="feature-section">
+      <h2>Communication &amp; Notifications</h2>
+      <ul>
+        <li>Bulk SMS and email scheduling with customizable templates.</li>
+        <li>SMS gateway support (Twilio, Msg91, Bulksmsbd, etc.).</li>
+        <li>Whatsapp chat integration.</li>
+        <li>Email triggers for admissions and other events.</li>
+        <li>SMS notifications for live class schedules and other alerts.</li>
+        <li>Login activity reports.</li>
+      </ul>
+      <div class="img-placeholder">
+        <img src="images/Notice-Board-Creation.png" alt="Notice Board Communication Screenshot">
+      </div>
+    </div>
+
+    <!-- Academic & Teacher Tools -->
+    <div class="feature-section">
+      <h2>Academic &amp; Teacher Tools</h2>
+      <ul>
+        <li>Homework assignment and submission with SMS notifications.</li>
+        <li>Online admission with customizable and configurable fields and payment status.</li>
+        <li>Teacher schedules and restrictions on some operations.</li>
+        <li>Subject-wise attendance and exam remarks.</li>
+        <li>Quick creation of exam and class schedules.</li>
+      </ul>
+      <div class="img-placeholder">
+        <img src="images/teachers-dashboard.png" alt="Teacher Dashboard Screenshot">
+      </div>
+    </div>
+
+    <!-- Transport Management -->
+    <div class="feature-section">
+      <h2>Transport Management</h2>
+      <ul>
+        <li>Manage school transport routes and vehicles.</li>
+        <li>Assign students to specific routes.</li>
+        <li>Custom domain and URL support for branch transport modules.</li>
+      </ul>
+      <div class="img-placeholder">
+        <img src="images/Transport.png" alt="Transport Management Screenshot">
       </div>
     </div>
 
@@ -204,52 +324,27 @@
         <li>View and manage class routines and timetables.</li>
         <li>Helps students and teachers stay organized.</li>
       </ul>
-      <div class="img-placeholder" style="padding:0;overflow:hidden;height:auto;display:flex;gap:24px;flex-wrap:wrap;justify-content:center;align-items:center;">
-        <img src="images/class-routine.png" alt="Class Routine Screenshot" style="width:100%;max-width:340px;border-radius:8px;box-shadow:0 2px 8px rgba(79,140,255,0.10);border:1px solid #e3e7ed;">
+      <div class="img-placeholder">
+        <img src="images/class-routine.png" alt="Class Routine Screenshot">
       </div>
     </div>
 
-    <!-- Notice Board -->
+     <!-- Accounting & Payroll -->
     <div class="feature-section">
-      <h2>Notice Board</h2>
+      <h2>Accounting &amp; Payroll</h2>
       <ul>
-        <li>Admins and teachers can create and manage notices.</li>
-        <li>Students and parents can view important announcements.</li>
+        <li>Office accounting integration for fees and salary payments.</li>
+        <li>Staff advance salary and leave requests.</li>
+        <li>Employee payslips with global logos.</li>
+        <li>Opening balance and automatic fines for late payments.</li>
+        <li>Salary payment management.</li>
       </ul>
-      <div class="img-placeholder" style="padding:0;overflow:hidden;height:auto;display:flex;gap:24px;flex-wrap:wrap;justify-content:center;align-items:center;">
-        <img src="images/Notice-Board-Creation.png" alt="Notice Board Screenshot" style="width:100%;max-width: 100%;border-radius:8px;box-shadow:0 2px 8px rgba(79,140,255,0.10);border:1px solid #e3e7ed;">
-      </div>
-    </div>
-
-    <!-- Transport Management -->
-    <div class="feature-section">
-      <h2>Transport Management</h2>
-      <ul>
-        <li>Manage school transport routes and vehicles.</li>
-        <li>Assign students to specific routes.</li>
-      </ul>
-      <div class="img-placeholder" style="padding:0;overflow:hidden;height:auto;display:flex;gap:24px;flex-wrap:wrap;justify-content:center;align-items:center;">
-        <img src="images/Transport.png" alt="Transport Management Screenshot" style="width:100%;max-width: 100%;border-radius:8px;box-shadow:0 2px 8px rgba(79,140,255,0.10);border:1px solid #e3e7ed;">
-      </div>
-    </div>
-
-    <!-- Fees Collection -->
-    <div class="feature-section">
-      <h2>Fees Collection</h2>
-      <ul>
-        <li>Manage and track student fee payments.</li>
-        <li>Generate receipts and payment reports.</li>
-      </ul>
-      <div class="img-placeholder" style="padding:0;overflow:hidden;height:auto;display:flex;gap:24px;flex-wrap:wrap;justify-content:center;align-items:center;">
-        <img src="images/fees-collection.png" alt="Fees Collection Screenshot" style="width:100%;max-width: 100%;border-radius:8px;box-shadow:0 2px 8px rgba(79,140,255,0.10);border:1px solid #e3e7ed;">
-      </div>
     </div>
 
     <div class="customization-note">
       <h3>A Note on Flexibility &amp; Customization</h3>
       <p>This overview highlights our core features, but our capabilities don't end here. We are deeply committed to ensuring our system meets your unique requirements. Whether you need additional functionality, integrations, or interface customizations, we are ready to adapt and deliver solutions tailored to your needs.</p>
     </div>
-
   </div>
 </body>
 </html>
