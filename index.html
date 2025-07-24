@@ -57,8 +57,13 @@
       box-shadow: 0 10px 30px rgba(41, 51, 71, 0.08);
       border: 1px solid #eef2f7;
     }
-    .img-placeholder, .feature-section > div[style*="display: flex"] {
+    .img-placeholder {
       margin-top: 2em;
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
     }
     ul {
       margin: 0;
@@ -66,21 +71,38 @@
       list-style-type: none;
     }
     ul li {
-        padding-left: 1.8em;
-        position: relative;
-        margin-bottom: 0.8em;
-        line-height: 1.6;
+      padding-left: 1.8em;
+      position: relative;
+      margin-bottom: 0.8em;
+      line-height: 1.6;
     }
     ul li::before {
-        content: '✓';
-        position: absolute;
-        left: 0;
-        top: 0;
-        color: #4a90e2;
-        font-weight: bold;
-        font-size: 1.2em;
+      content: '✓';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #4a90e2;
+      font-weight: bold;
+      font-size: 1.2em;
     }
 
+    .img-placeholder img {
+      max-width: 80%;
+      min-width: 340px;
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(79,140,255,0.10);
+      border: 1px solid #e3e7ed;
+      margin-bottom: 12px;
+      object-fit: cover;
+    }
+
+    @media (max-width: 900px) {
+      .img-placeholder img {
+        max-width: 100%;
+        min-width: 180px;
+      }
+    }
     @media (max-width: 600px) {
       body { padding: 20px 0; }
       .container { padding: 0 8px; }
@@ -89,6 +111,12 @@
       .feature-section { padding: 1.5em; }
       .img-placeholder img {
         max-width: 100%;
+        min-width: 120px;
+      }
+      .img-placeholder {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
       }
     }
     .customization-note {
@@ -103,14 +131,6 @@
       margin-top: 0;
       color: #2f5a8d;
     }
-    .img-placeholder img {
-      max-width: 48%;
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(79,140,255,0.10);
-      border: 1px solid #e3e7ed;
-      margin-bottom: 12px;
-    }
   </style>
 </head>
 <body>
@@ -120,44 +140,15 @@
       This document outlines the key features of the School Management System, including multi-branch management, role-based access, student and teacher management, exams, fees, and more.
     </p>
 
-    <!-- Multi-Branch Management -->
-    <div class="feature-section">
-      <h2>Multi-Branch Management</h2>
-      <ul>
-        <li>Centralized SuperAdmin control over multiple schools/branches.</li>
-        <li>Branch Admin manages branch-specific data, staff, and students.</li>
-        <li>Data isolation between branches for confidentiality and security.</li>
-        <li>Custom domain and URL for each branch (examples provided).</li>
-      </ul>
-      <div class="img-placeholder">
-        <img src="images/admin-dashboard.png" alt="SuperAdmin Dashboard Screenshot">
-        <img src="images/login.png" alt="Branch Admin Login Screenshot">
-      </div>
-    </div>
-
-    <!-- User Roles & Access -->
-    <div class="feature-section">
-      <h2>User Roles &amp; Access</h2>
-      <ul>
-        <li>SuperAdmin with full system control.</li>
-        <li>Branch Admin and Staff with restricted access.</li>
-        <li>Student and Parent panels with configurable login enable/disable.</li>
-        <li>Receptionist and other staff roles with specific permissions.</li>
-        <li>Role and permission management system.</li>
-      </ul>
-      <div class="img-placeholder">
-        <img src="images/login.png" alt="User Login Screenshot">
-      </div>
-    </div>
-
     <!-- User Management -->
     <div class="feature-section">
       <h2>User Management</h2>
       <ul>
-        <li>Admins, teachers, and students can securely register, log in, and manage their profiles.</li>
-        <li>Role-based access ensures each user sees only the features relevant to them.</li>
-        <li>Admins can manage all users, including adding, editing, or removing accounts.</li>
-        <li>Modern dashboards and navigation tailored to each role.</li>
+        <li>Multi-branch system with SuperAdmin control and branch-specific data isolation.</li>
+        <li>Role-based access control (SuperAdmin, Branch Admin, Staff, Teachers, Students, Parents).</li>
+        <li>Custom domain and URL support for each branch with configurable login panels.</li>
+        <li>Secure user registration, profile management, and role-specific dashboards.</li>
+        <li>Comprehensive user management with add, edit, and remove capabilities.</li>
       </ul>
       <div class="img-placeholder">
         <img src="images/login.png" alt="Login Page Screenshot">
@@ -185,20 +176,15 @@
     <div class="feature-section">
       <h2>Student Information &amp; Management</h2>
       <ul>
-        <li>Student registration, profile management, and document uploads.</li>
-        <li>Customizable fields for student and admission data.</li>
-        <li>Multi-class student handling.</li>
-        <li>Sibling information displayed on student profiles.</li>
-        <li>Student promotion with history tracking.</li>
-        <li>Disable student functionality with a reason.</li>
-        <li>Student leave and leave request management.</li>
-        <li>Student directory with search and filtering options.</li>
-        <li>Admin tools for editing or removing student records.</li>
-        <li>Student promotion management.</li>
+        <li>Complete student lifecycle management from registration to graduation.</li>
+        <li>Customizable student profiles with document uploads and sibling information.</li>
+        <li>Student promotion system with history tracking and multi-class support.</li>
+        <li>Leave management and student directory with advanced search capabilities.</li>
+        <li>Admin tools for student record management including disable/enable functionality.</li>
       </ul>
       <div class="img-placeholder">
         <img src="images/students-dashboard.png" alt="Student Dashboard Screenshot">
-        <img src="images/students-promotion.png" alt="Student Promotion Screenshot">
+        <!-- <img src="images/students-promotion.png" alt="Student Promotion Screenshot"> -->
       </div>
     </div>
 
@@ -219,16 +205,11 @@
     <div class="feature-section">
       <h2>Examination &amp; Results</h2>
       <ul>
-        <li>Multiple exam setups (Marks, GPA, Marks &amp; GPA).</li>
-        <li>Exam scheduling and status management.</li>
-        <li>Position/rank management in exams.</li>
-        <li>Online exams with CSV import of questions.</li>
-        <li>Report cards with customizable remarks and principal/teacher comments.</li>
-        <li>Exam progress reports showing cumulative averages and positions.</li>
-        <li>Exam results publication with enable/disable options.</li>
-        <li>Online exam fee payment feature.</li>
-        <li>Support for multiple exam types including tabulation sheets.</li>
-        <li>Result dashboards and analytics for students and teachers.</li>
+        <li>Multiple exam setups (Marks, GPA, Marks &amp; GPA) with scheduling and status management.</li>
+        <li>Online exams with CSV import, position/rank management, and exam fee payments.</li>
+        <li>Comprehensive report cards with customizable remarks, principal/teacher comments, and progress tracking.</li>
+        <li>Exam results publication controls and support for multiple exam types including tabulation sheets.</li>
+        <li>Advanced result dashboards and analytics for students and teachers with cumulative performance tracking.</li>
       </ul>
       <div class="img-placeholder">
         <img src="images/exam.png" alt="Exam and Result Dashboard Screenshot">
@@ -239,15 +220,11 @@
     <div class="feature-section">
       <h2>Attendance</h2>
       <ul>
-        <li>Subject-wise attendance tracking.</li>
-        <li>QR Code attendance addon support.</li>
-        <li>Daily and overview attendance reports.</li>
-        <li>Attendance percentage in reports.</li>
-        <li>Half-day attendance option and automatic holiday status.</li>
-        <li>Attendance linked to events and holidays.</li>
-        <li>Student panel attendance view with restrictions.</li>
-        <li>Attendance records can be managed by teachers and viewed by admins.</li>
-        <li>Manual and automated (RFID/QR/Barcode) attendance recording.</li>
+        <li>Subject-wise attendance tracking with QR Code addon support and automated recording (RFID/QR/Barcode).</li>
+        <li>Comprehensive attendance reports including daily overviews, percentages, and half-day options.</li>
+        <li>Smart attendance system with automatic holiday status and event-linked attendance management.</li>
+        <li>Role-based attendance access - teachers manage records, admins view all, students see restricted views.</li>
+        <li>Advanced attendance analytics with holiday integration and flexible recording methods.</li>
       </ul>
       <div class="img-placeholder">
         <img src="images/Student-attendance.png" alt="Student Attendance Screenshot">
@@ -258,15 +235,11 @@
     <div class="feature-section">
       <h2>Fee Management</h2>
       <ul>
-        <li>Student fee collection with multiple fee support.</li>
-        <li>Offline and online fee payment gateways including Razorpay, Paytm (India), Flutterwave, Toyyibpay (Malaysia), Payhere (Sri Lanka), Midtrans (Indonesia), Jazzcash (Pakistan), SSLcommerz (Bangladesh).</li>
-        <li>Fee reminders with SMS and DLT template support.</li>
-        <li>Fee revert feature linked with office accounting.</li>
-        <li>Carry-forward due fees across sessions.</li>
-        <li>Multiple receipt copies printing.</li>
-        <li>Invoice and payment ID customization.</li>
-        <li>Manage and track student fee payments.</li>
-        <li>Generate receipts and payment reports.</li>
+        <li>Comprehensive fee collection system with multiple fee types and global payment gateway support (Razorpay, Paytm, Flutterwave, Toyyibpay, Payhere, Midtrans, Jazzcash, SSLcommerz).</li>
+        <li>Advanced fee management with SMS/DLT reminders, fee revert functionality, and carry-forward due fees across sessions.</li>
+        <li>Professional fee processing including multiple receipt copies, customizable invoices, and payment ID management.</li>
+        <li>Complete fee tracking and reporting system with office accounting integration and comprehensive payment analytics.</li>
+        <li>Automated fee workflows with reminder systems, payment tracking, and detailed financial reporting capabilities.</li>
       </ul>
       <div class="img-placeholder">
         <img src="images/fees-collection.png" alt="Fees Collection Screenshot">
@@ -329,8 +302,8 @@
       </div>
     </div>
 
-     <!-- Accounting & Payroll -->
-    <div class="feature-section">
+    <!-- Accounting & Payroll -->
+    <!-- <div class="feature-section">
       <h2>Accounting &amp; Payroll</h2>
       <ul>
         <li>Office accounting integration for fees and salary payments.</li>
@@ -339,7 +312,7 @@
         <li>Opening balance and automatic fines for late payments.</li>
         <li>Salary payment management.</li>
       </ul>
-    </div>
+    </div> -->
 
     <div class="customization-note">
       <h3>A Note on Flexibility &amp; Customization</h3>
