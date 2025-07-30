@@ -6,8 +6,22 @@
     <title>School ERP Pricing Calculator</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 20px; }
-        .container { max-width: 1200px; margin: 0 auto; background: white; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); overflow: hidden; }
+        body { 
+            font-family: Arial, sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            min-height: 100vh; 
+            padding: 20px; 
+            line-height: 1.6;
+        }
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            background: white; 
+            border-radius: 20px; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
+            overflow: hidden; 
+            width: 100%;
+        }
         .header { background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); color: white; padding: 40px; text-align: center; }
         .header h1 { font-size: 2.5rem; margin-bottom: 10px; }
         .calculator-section { padding: 40px; }
@@ -320,7 +334,13 @@
         .info-box h4 { color: #1976d2; margin-bottom: 8px; }
         .info-box p { color: #424242; font-size: 0.9rem; line-height: 1.5; }
         
-        .student-tabs { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+        .student-tabs { 
+            display: flex; 
+            gap: 10px; 
+            margin-bottom: 20px; 
+            flex-wrap: wrap; 
+            justify-content: center;
+        }
         .student-tab { 
             padding: 12px 20px; 
             background: #f8f9fa; 
@@ -331,6 +351,8 @@
             font-weight: 600;
             color: #6c757d;
             font-size: 0.9rem;
+            min-width: 80px;
+            text-align: center;
         }
         .student-tab:hover { 
             border-color: #3498db; 
@@ -349,9 +371,15 @@
             margin-top: 10px; 
         }
         
-        .billing-tabs { display: flex; gap: 8px; margin-bottom: 15px; }
+        .billing-tabs { 
+            display: flex; 
+            gap: 8px; 
+            margin-bottom: 15px; 
+            flex-wrap: wrap;
+        }
         .billing-tab { 
             flex: 1;
+            min-width: 120px;
             padding: 15px 10px; 
             background: #f8f9fa; 
             border: 2px solid #e9ecef; 
@@ -475,111 +503,174 @@
         }
         
         @media (max-width: 768px) {
-            .container {
+            body {
                 padding: 10px;
             }
             
+            .container {
+                margin: 0;
+                border-radius: 15px;
+            }
+            
             .header {
-                padding: 20px 15px;
+                padding: 25px 20px;
             }
             
             .header h1 {
                 font-size: 1.8rem;
+                line-height: 1.2;
             }
             
             .header p {
                 font-size: 0.9rem;
+                line-height: 1.4;
             }
             
             .calculator-section {
-                padding: 20px 15px;
+                padding: 25px 20px;
             }
             
             .calculator-grid {
                 grid-template-columns: 1fr;
-                gap: 20px;
+                gap: 25px;
             }
             
             .config-row {
                 grid-template-columns: 1fr;
-                gap: 15px;
+                gap: 20px;
             }
             
             .input-panel, .results-panel {
-                padding: 20px;
+                padding: 25px;
+            }
+            
+            .input-group {
+                margin-bottom: 20px;
+            }
+            
+            .input-group label {
+                font-size: 0.95rem;
+                margin-bottom: 6px;
+            }
+            
+            .input-group input, .input-group select {
+                padding: 10px;
+                font-size: 0.95rem;
             }
             
             .student-tabs {
+                display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 gap: 8px;
+                margin-bottom: 15px;
+            }
+            
+            .student-tab {
+                padding: 10px 8px;
+                text-align: center;
             }
             
             .student-tab .student-count {
                 font-size: 0.9rem;
+                font-weight: 700;
             }
             
             .student-tab .student-label {
                 font-size: 0.7rem;
+                opacity: 0.8;
+            }
+            
+            .checkbox-group {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            
+            .checkbox-item {
+                padding: 12px;
+                font-size: 0.9rem;
             }
             
             .billing-tabs {
                 flex-direction: column;
-                gap: 10px;
+                gap: 12px;
             }
             
             .billing-tab {
-                padding: 12px;
+                padding: 15px 12px;
                 text-align: center;
             }
             
+            .billing-tab .billing-period {
+                font-size: 1rem;
+            }
+            
+            .billing-tab .billing-discount {
+                font-size: 0.85rem;
+            }
+            
+            .billing-tab .billing-price {
+                font-size: 0.8rem;
+            }
+            
             .price-display {
-                padding: 20px;
+                padding: 25px 20px;
+                margin-bottom: 25px;
             }
             
             .main-price {
-                font-size: 2rem;
+                font-size: 2.2rem;
+            }
+            
+            .price-period {
+                font-size: 1rem;
+            }
+            
+            .price-per-student {
+                font-size: 1rem;
+            }
+            
+            .breakdown {
+                padding: 20px;
+            }
+            
+            .breakdown h3 {
+                font-size: 1.1rem;
+                margin-bottom: 15px;
             }
             
             .breakdown-item {
-                padding: 10px;
+                padding: 10px 0;
                 font-size: 0.9rem;
+                line-height: 1.4;
             }
             
             .full-width-sections {
-                padding: 20px 15px;
+                padding: 25px 20px;
             }
             
             .modules-grid {
                 grid-template-columns: 1fr;
-                gap: 15px;
+                gap: 20px;
             }
             
             .setup-details {
                 grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            
-            .saas-notice {
-                padding: 15px;
-                margin-top: 20px;
-            }
-            
-            .saas-notice h5 {
-                font-size: 1rem;
-            }
-            
-            .saas-content p {
-                font-size: 0.85rem;
+                gap: 20px;
             }
             
             .details-grid {
                 grid-template-columns: 1fr;
-                gap: 15px;
+                gap: 20px;
             }
             
             .core-modules, .white-label-section, .pricing-details {
-                padding: 15px;
-                margin: 15px 0;
+                padding: 20px;
+                margin: 20px 0;
+            }
+            
+            .core-modules h3, .white-label-section h3, .pricing-details h3 {
+                font-size: 1.2rem;
+                margin-bottom: 15px;
             }
             
             .module-item, .setup-item, .detail-item {
@@ -588,6 +679,267 @@
             
             .module-item h4, .setup-item h5, .detail-item h4 {
                 font-size: 1rem;
+                margin-bottom: 10px;
+            }
+            
+            .module-item ul, .setup-item ul, .detail-item ul {
+                font-size: 0.9rem;
+            }
+            
+            .module-item li, .setup-item li, .detail-item li {
+                margin: 5px 0;
+                line-height: 1.4;
+            }
+            
+            .setup-cost {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+            
+            .setup-cost h4 {
+                font-size: 1.1rem;
+            }
+            
+            .setup-cost p {
+                font-size: 0.9rem;
+            }
+            
+            .saas-notice {
+                padding: 20px;
+                margin-top: 20px;
+            }
+            
+            .saas-notice h5 {
+                font-size: 1rem;
+                margin-bottom: 12px;
+            }
+            
+            .saas-content p {
+                font-size: 0.9rem;
+                line-height: 1.5;
+            }
+            
+            .support-section {
+                padding: 25px 20px;
+                margin: 25px 0;
+            }
+            
+            .support-section h3 {
+                font-size: 1.3rem;
+                margin-bottom: 20px;
+            }
+            
+            .support-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .support-item {
+                padding: 20px;
+            }
+            
+            .support-icon {
+                font-size: 1.8rem;
+            }
+            
+            .support-item h4 {
+                font-size: 1.1rem;
+            }
+            
+            .support-item li {
+                font-size: 0.9rem;
+            }
+            
+            .support-note {
+                padding: 15px;
+            }
+            
+            .support-note p {
+                font-size: 0.9rem;
+            }
+            
+            .support-feature {
+                padding: 8px 0;
+            }
+            
+            .feature-name, .feature-value {
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 5px;
+            }
+            
+            .container {
+                margin: 0;
+                border-radius: 10px;
+            }
+            
+            .header {
+                padding: 20px 15px;
+            }
+            
+            .header h1 {
+                font-size: 1.6rem;
+                line-height: 1.2;
+            }
+            
+            .header p {
+                font-size: 0.85rem;
+                line-height: 1.4;
+            }
+            
+            .calculator-section {
+                padding: 20px 15px;
+            }
+            
+            .calculator-grid {
+                gap: 20px;
+            }
+            
+            .config-row {
+                gap: 15px;
+            }
+            
+            .input-panel, .results-panel {
+                padding: 20px;
+            }
+            
+            .input-group {
+                margin-bottom: 18px;
+            }
+            
+            .input-group label {
+                font-size: 0.9rem;
+                margin-bottom: 5px;
+            }
+            
+            .input-group input, .input-group select {
+                padding: 8px;
+                font-size: 0.9rem;
+            }
+            
+            .student-tabs {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 6px;
+                margin-bottom: 12px;
+            }
+            
+            .student-tab {
+                padding: 8px 6px;
+                text-align: center;
+            }
+            
+            .student-tab .student-count {
+                font-size: 0.85rem;
+                font-weight: 700;
+            }
+            
+            .student-tab .student-label {
+                font-size: 0.65rem;
+                opacity: 0.8;
+            }
+            
+            .custom-student-input input {
+                padding: 8px;
+                font-size: 0.9rem;
+            }
+            
+            .checkbox-group {
+                gap: 10px;
+            }
+            
+            .checkbox-item {
+                padding: 10px;
+                font-size: 0.85rem;
+            }
+            
+            .billing-tabs {
+                gap: 10px;
+            }
+            
+            .billing-tab {
+                padding: 12px 10px;
+            }
+            
+            .billing-tab .billing-period {
+                font-size: 0.95rem;
+            }
+            
+            .billing-tab .billing-discount {
+                font-size: 0.8rem;
+            }
+            
+            .billing-tab .billing-price {
+                font-size: 0.75rem;
+            }
+            
+            .price-display {
+                padding: 20px 15px;
+                margin-bottom: 20px;
+            }
+            
+            .main-price {
+                font-size: 2rem;
+            }
+            
+            .price-period {
+                font-size: 0.95rem;
+            }
+            
+            .price-per-student {
+                font-size: 0.9rem;
+            }
+            
+            .breakdown {
+                padding: 15px;
+            }
+            
+            .breakdown h3 {
+                font-size: 1rem;
+                margin-bottom: 12px;
+            }
+            
+            .breakdown-item {
+                padding: 8px 0;
+                font-size: 0.85rem;
+                line-height: 1.3;
+            }
+            
+            .full-width-sections {
+                padding: 20px 15px;
+            }
+            
+            .modules-grid {
+                gap: 15px;
+            }
+            
+            .setup-details {
+                gap: 15px;
+            }
+            
+            .details-grid {
+                gap: 15px;
+            }
+            
+            .core-modules, .white-label-section, .pricing-details {
+                padding: 15px;
+                margin: 15px 0;
+            }
+            
+            .core-modules h3, .white-label-section h3, .pricing-details h3 {
+                font-size: 1.1rem;
+                margin-bottom: 12px;
+            }
+            
+            .module-item, .setup-item, .detail-item {
+                padding: 12px;
+            }
+            
+            .module-item h4, .setup-item h5, .detail-item h4 {
+                font-size: 0.95rem;
                 margin-bottom: 8px;
             }
             
@@ -599,11 +951,212 @@
                 margin: 4px 0;
                 line-height: 1.3;
             }
+            
+            .setup-cost {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+            
+            .setup-cost h4 {
+                font-size: 1rem;
+            }
+            
+            .setup-cost p {
+                font-size: 0.85rem;
+            }
+            
+            .saas-notice {
+                padding: 15px;
+                margin-top: 15px;
+            }
+            
+            .saas-notice h5 {
+                font-size: 0.95rem;
+                margin-bottom: 10px;
+            }
+            
+            .saas-content p {
+                font-size: 0.85rem;
+                line-height: 1.4;
+            }
+            
+            .support-section {
+                padding: 20px 15px;
+                margin: 20px 0;
+            }
+            
+            .support-section h3 {
+                font-size: 1.2rem;
+                margin-bottom: 15px;
+            }
+            
+            .support-grid {
+                gap: 15px;
+            }
+            
+            .support-item {
+                padding: 15px;
+            }
+            
+            .support-icon {
+                font-size: 1.6rem;
+            }
+            
+            .support-item h4 {
+                font-size: 1rem;
+            }
+            
+            .support-item li {
+                font-size: 0.85rem;
+            }
+            
+            .support-note {
+                padding: 12px;
+            }
+            
+            .support-note p {
+                font-size: 0.85rem;
+            }
+            
+            .support-feature {
+                padding: 6px 0;
+            }
+            
+            .feature-name, .feature-value {
+                font-size: 0.85rem;
+            }
         }
         
-        @media (max-width: 480px) {
+        @media (min-width: 769px) and (max-width: 1024px) {
+            body {
+                padding: 15px;
+            }
+            
             .container {
-                padding: 5px;
+                max-width: 100%;
+                margin: 0;
+            }
+            
+            .calculator-section {
+                padding: 30px;
+            }
+            
+            .full-width-sections {
+                padding: 30px;
+            }
+            
+            .calculator-grid {
+                gap: 30px;
+            }
+            
+            .config-row {
+                gap: 25px;
+            }
+            
+            .input-panel, .results-panel {
+                padding: 25px;
+            }
+            
+            .student-tabs {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+            }
+            
+            .student-tab {
+                padding: 12px 10px;
+            }
+            
+            .student-tab .student-count {
+                font-size: 1rem;
+            }
+            
+            .student-tab .student-label {
+                font-size: 0.8rem;
+            }
+            
+            .checkbox-group {
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+            }
+            
+            .billing-tabs {
+                gap: 15px;
+            }
+            
+            .billing-tab {
+                padding: 18px 15px;
+            }
+            
+            .price-display {
+                padding: 30px 25px;
+            }
+            
+            .main-price {
+                font-size: 2.5rem;
+            }
+            
+            .breakdown {
+                padding: 25px;
+            }
+            
+            .modules-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 25px;
+            }
+            
+            .setup-details {
+                grid-template-columns: 1fr 1fr;
+                gap: 25px;
+            }
+            
+            .details-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 25px;
+            }
+            
+            .support-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 25px;
+            }
+            
+            .core-modules, .white-label-section, .pricing-details {
+                padding: 25px;
+                margin: 25px 0;
+            }
+            
+            .setup-cost {
+                padding: 25px;
+            }
+            
+            .saas-notice {
+                padding: 25px;
+            }
+            
+            .support-section {
+                padding: 30px 25px;
+            }
+        }
+        
+        @media (min-width: 1025px) {
+            .calculator-section {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            
+            .full-width-sections {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+        }
+        
+        /* Extra small devices (phones, 360px and down) */
+        @media (max-width: 360px) {
+            body {
+                padding: 3px;
+            }
+            
+            .container {
+                border-radius: 8px;
             }
             
             .header {
@@ -611,7 +1164,7 @@
             }
             
             .header h1 {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
             }
             
             .header p {
@@ -626,17 +1179,13 @@
                 padding: 15px;
             }
             
-            .full-width-sections {
-                padding: 15px 10px;
-            }
-            
             .student-tabs {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 6px;
+                gap: 4px;
             }
             
             .student-tab {
-                padding: 8px 4px;
+                padding: 6px 4px;
             }
             
             .student-tab .student-count {
@@ -651,118 +1200,46 @@
                 font-size: 1.8rem;
             }
             
-            .price-period {
-                font-size: 0.9rem;
-            }
-            
-            .price-per-student {
-                font-size: 0.8rem;
-            }
-            
             .breakdown-item {
-                padding: 8px;
                 font-size: 0.8rem;
-            }
-            
-            .core-modules h3, .white-label-section h3, .pricing-details h3, .support-section h3 {
-                font-size: 1.1rem;
-                margin-bottom: 12px;
-            }
-            
-            .support-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            
-            .support-note {
-                padding: 12px;
-            }
-            
-            .support-note p {
-                font-size: 0.85rem;
-            }
-            
-            .support-item {
-                padding: 15px;
-            }
-            
-            .support-icon {
-                font-size: 1.5rem;
-            }
-            
-            .support-item h4 {
-                font-size: 1rem;
-            }
-            
-            .support-item li {
-                font-size: 0.8rem;
-            }
-            
-            .time-item {
                 padding: 6px 0;
             }
             
-            .time-label, .time-value {
-                font-size: 0.8rem;
+            .full-width-sections {
+                padding: 15px 10px;
             }
             
-            .premium-item {
-                padding: 4px 0;
-            }
-            
-            .feature-name, .feature-status {
-                font-size: 0.8rem;
-            }
-            
-            .support-guarantee {
-                padding: 20px;
-            }
-            
-            .guarantee-content h4 {
-                font-size: 1.1rem;
-            }
-            
-            .guarantee-content p {
-                font-size: 0.85rem;
-            }
-            
-            .guarantee-badges {
-                gap: 10px;
-            }
-            
-            .badge {
-                padding: 6px 12px;
-                font-size: 0.75rem;
-            }
-            
-            .module-item, .setup-item, .detail-item {
+            .core-modules, .white-label-section, .pricing-details {
                 padding: 12px;
+                margin: 12px 0;
             }
             
-            .setup-cost {
-                padding: 12px;
-            }
-            
-            .setup-cost h4 {
-                font-size: 1rem;
-            }
-            
-            .setup-cost p {
-                font-size: 0.8rem;
+            .support-section {
+                padding: 15px 10px;
             }
         }
         
-        @media (min-width: 769px) and (max-width: 1024px) {
-            .calculator-section {
-                padding: 30px;
+        /* Landscape orientation for mobile */
+        @media (max-width: 768px) and (orientation: landscape) {
+            .calculator-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
             }
             
-            .full-width-sections {
-                padding: 30px;
+            .header {
+                padding: 15px 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.6rem;
             }
             
             .student-tabs {
                 grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .full-width-sections {
+                padding: 20px;
             }
             
             .modules-grid {
@@ -782,15 +1259,40 @@
             }
         }
         
-        @media (min-width: 1025px) {
-            .calculator-section {
-                max-width: 1200px;
-                margin: 0 auto;
+        /* High DPI displays */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .container {
+                box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            }
+            
+            .input-panel, .results-panel {
+                border: 1px solid rgba(0,0,0,0.1);
+            }
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .header {
+                background: #2c3e50;
+                color: white;
+            }
+            
+            .calculator-grid {
+                grid-template-columns: 1fr 1fr;
             }
             
             .full-width-sections {
-                max-width: 1200px;
-                margin: 0 auto;
+                padding: 20px;
             }
         }
     </style>
