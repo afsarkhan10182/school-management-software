@@ -47,7 +47,45 @@
         .billing-options { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-bottom: 25px; }
         .billing-option { padding: 15px; text-align: center; border: 2px solid #e9ecef; border-radius: 10px; cursor: pointer; }
         .billing-option.active { border-color: #3498db; background: #ebf3ff; }
-        .recommendations { background: #e8f5e8; padding: 20px; border-radius: 10px; border-left: 4px solid #27ae60; }
+        .recommendations { background: #e8f5e8; padding: 20px; border-radius: 10px; border-left: 4px solid #27ae60; margin-bottom: 20px; }
+        
+        .pricing-details {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #e9ecef;
+        }
+        
+        .pricing-details h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .detail-item h4 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        .detail-item ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .detail-item li {
+            margin: 5px 0;
+            color: #2c3e50;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
         
         .info-box { background: #e3f2fd; border-left: 4px solid #2196f3; padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0; }
         .info-box h4 { color: #1976d2; margin-bottom: 8px; }
@@ -212,6 +250,7 @@
             .calculator-grid { grid-template-columns: 1fr; }
             .student-tabs { justify-content: center; }
             .billing-tabs { flex-direction: column; }
+            .details-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -368,6 +407,38 @@
                     <div>Start with core modules and add features gradually</div>
                     <div>SMS notifications improve parent engagement</div>
                     <div>Transport management helps with logistics</div>
+                </div>
+
+                <div class="pricing-details">
+                    <h3>📋 Pricing Details</h3>
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <h4>Student Pricing (per month)</h4>
+                            <ul>
+                                <li>Small School (≤300 students): ₹15/student</li>
+                                <li>Medium School (≤1000 students): ₹18/student</li>
+                                <li>Large School (≤3000 students): ₹16/student</li>
+                                <li>Enterprise School (>3000 students): ₹14/student</li>
+                            </ul>
+                        </div>
+                        <div class="detail-item">
+                            <h4>School Type Discounts</h4>
+                            <ul>
+                                <li>Regular Private School: No discount</li>
+                                <li>Rural School: 20% discount</li>
+                                <li>NGO/Trust School: 25% discount</li>
+                            </ul>
+                        </div>
+                        <div class="detail-item">
+                            <h4>Additional Features</h4>
+                            <ul>
+                                <li>First 15 staff: Free</li>
+                                <li>Additional staff: ₹5/staff/month</li>
+                                <li>Yearly billing: 15% discount</li>
+                                <li>SMS: ₹0.10 per SMS</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
