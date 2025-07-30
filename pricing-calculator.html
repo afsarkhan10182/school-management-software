@@ -87,6 +87,110 @@
             line-height: 1.4;
         }
         
+        .core-modules {
+            background: #e8f5e8;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #27ae60;
+            margin: 20px 0;
+        }
+        
+        .core-modules h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .modules-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .module-item h4 {
+            color: #27ae60;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        .module-item ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .module-item li {
+            margin: 5px 0;
+            color: #2c3e50;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        .white-label-section {
+            background: #f0f8ff;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #3498db;
+            margin: 20px 0;
+        }
+        
+        .white-label-section h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .setup-cost {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .setup-cost h4 {
+            margin: 0 0 5px 0;
+            font-size: 1.1rem;
+        }
+        
+        .setup-cost p {
+            margin: 0;
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+        
+        .setup-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .setup-item h5 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        
+        .setup-item ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .setup-item li {
+            margin: 5px 0;
+            color: #2c3e50;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+        
+        .full-width-sections {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
         .info-box { background: #e3f2fd; border-left: 4px solid #2196f3; padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0; }
         .info-box h4 { color: #1976d2; margin-bottom: 8px; }
         .info-box p { color: #424242; font-size: 0.9rem; line-height: 1.5; }
@@ -245,12 +349,241 @@
             box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
         }
         
-        @media (max-width: 768px) { 
-            .config-row { grid-template-columns: 1fr; }
-            .calculator-grid { grid-template-columns: 1fr; }
-            .student-tabs { justify-content: center; }
-            .billing-tabs { flex-direction: column; }
-            .details-grid { grid-template-columns: 1fr; }
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 20px 15px;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .header p {
+                font-size: 0.9rem;
+            }
+            
+            .calculator-section {
+                padding: 20px 15px;
+            }
+            
+            .calculator-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .config-row {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .input-panel, .results-panel {
+                padding: 20px;
+            }
+            
+            .student-tabs {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 8px;
+            }
+            
+            .student-tab .student-count {
+                font-size: 0.9rem;
+            }
+            
+            .student-tab .student-label {
+                font-size: 0.7rem;
+            }
+            
+            .billing-tabs {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .billing-tab {
+                padding: 12px;
+                text-align: center;
+            }
+            
+            .price-display {
+                padding: 20px;
+            }
+            
+            .main-price {
+                font-size: 2rem;
+            }
+            
+            .breakdown-item {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+            
+            .full-width-sections {
+                padding: 20px 15px;
+            }
+            
+            .modules-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .setup-details {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .details-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .core-modules, .white-label-section, .pricing-details {
+                padding: 15px;
+                margin: 15px 0;
+            }
+            
+            .module-item, .setup-item, .detail-item {
+                padding: 15px;
+            }
+            
+            .module-item h4, .setup-item h5, .detail-item h4 {
+                font-size: 1rem;
+                margin-bottom: 8px;
+            }
+            
+            .module-item ul, .setup-item ul, .detail-item ul {
+                font-size: 0.85rem;
+            }
+            
+            .module-item li, .setup-item li, .detail-item li {
+                margin: 4px 0;
+                line-height: 1.3;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 5px;
+            }
+            
+            .header {
+                padding: 15px 10px;
+            }
+            
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .header p {
+                font-size: 0.8rem;
+            }
+            
+            .calculator-section {
+                padding: 15px 10px;
+            }
+            
+            .input-panel, .results-panel {
+                padding: 15px;
+            }
+            
+            .full-width-sections {
+                padding: 15px 10px;
+            }
+            
+            .student-tabs {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 6px;
+            }
+            
+            .student-tab {
+                padding: 8px 4px;
+            }
+            
+            .student-tab .student-count {
+                font-size: 0.8rem;
+            }
+            
+            .student-tab .student-label {
+                font-size: 0.6rem;
+            }
+            
+            .main-price {
+                font-size: 1.8rem;
+            }
+            
+            .price-period {
+                font-size: 0.9rem;
+            }
+            
+            .price-per-student {
+                font-size: 0.8rem;
+            }
+            
+            .breakdown-item {
+                padding: 8px;
+                font-size: 0.8rem;
+            }
+            
+            .core-modules h3, .white-label-section h3, .pricing-details h3 {
+                font-size: 1.1rem;
+                margin-bottom: 12px;
+            }
+            
+            .module-item, .setup-item, .detail-item {
+                padding: 12px;
+            }
+            
+            .setup-cost {
+                padding: 12px;
+            }
+            
+            .setup-cost h4 {
+                font-size: 1rem;
+            }
+            
+            .setup-cost p {
+                font-size: 0.8rem;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .calculator-section {
+                padding: 30px;
+            }
+            
+            .full-width-sections {
+                padding: 30px;
+            }
+            
+            .student-tabs {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .modules-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .setup-details {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .details-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (min-width: 1025px) {
+            .calculator-section {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            
+            .full-width-sections {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
         }
     </style>
 </head>
@@ -402,48 +735,134 @@
 
                 </div>
 
-                <div class="recommendations">
-                    <h3>💡 Recommendations</h3>
-                    <div>Start with core modules and add features gradually</div>
-                    <div>SMS notifications improve parent engagement</div>
-                    <div>Transport management helps with logistics</div>
-                </div>
 
-                <div class="pricing-details">
-                    <h3>📋 Pricing Details</h3>
-                    <div class="details-grid">
-                        <div class="detail-item">
-                            <h4>Student Pricing (per month)</h4>
+
+
+            </div>
+        </div>
+
+        <!-- Full Width Sections -->
+        <div class="full-width-sections">
+            <div class="core-modules">
+                <h3>🎓 Core Modules Included</h3>
+                <div class="modules-grid">
+                    <div class="module-item">
+                        <h4>📚 Academic Management</h4>
+                        <ul>
+                            <li>Student Registration & Admission</li>
+                            <li>Class & Section Management</li>
+                            <li>Subject & Curriculum Setup</li>
+                            <li>Attendance Tracking</li>
+                            <li>Exam & Results Management</li>
+                        </ul>
+                    </div>
+                    <div class="module-item">
+                        <h4>💰 Fee Management</h4>
+                        <ul>
+                            <li>Fee Structure Setup</li>
+                            <li>Online Fee Collection</li>
+                            <li>Payment Tracking</li>
+                            <li>Fee Reports & Analytics</li>
+                            <li>Late Fee Management</li>
+                        </ul>
+                    </div>
+                    <div class="module-item">
+                        <h4>👥 Staff Management</h4>
+                        <ul>
+                            <li>Teacher & Staff Profiles</li>
+                            <li>Attendance Management</li>
+                            <li>Performance Tracking</li>
+                            <li>Leave Management</li>
+                            <li>Staff Reports</li>
+                        </ul>
+                    </div>
+                    <div class="module-item">
+                        <h4>📊 Reports & Analytics</h4>
+                        <ul>
+                            <li>Student Performance Reports</li>
+                            <li>Financial Reports</li>
+                            <li>Attendance Reports</li>
+                            <li>Custom Dashboard</li>
+                            <li>Export & Print Options</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="white-label-section">
+                <h3>🏷️ White Labeling & Setup</h3>
+                <div class="white-label-content">
+                    <div class="setup-cost">
+                        <h4>One-Time Setup Cost: ₹30,000</h4>
+                        <p>Includes complete customization and onboarding for your school</p>
+                    </div>
+                    <div class="setup-details">
+                        <div class="setup-item">
+                            <h5>🎨 Branding & Customization</h5>
                             <ul>
-                                <li>Small School (≤300 students): ₹15/student</li>
-                                <li>Medium School (≤1000 students): ₹18/student</li>
-                                <li>Large School (≤3000 students): ₹16/student</li>
-                                <li>Enterprise School (>3000 students): ₹14/student</li>
+                                <li>School logo integration</li>
+                                <li>Custom color scheme</li>
+                                <li>School-specific domain</li>
+                                <li>Branded email templates</li>
                             </ul>
                         </div>
-                        <div class="detail-item">
-                            <h4>School Type Discounts</h4>
+                        <div class="setup-item">
+                            <h5>📥 Data Migration & Onboarding</h5>
                             <ul>
-                                <li>Regular Private School: No discount</li>
-                                <li>Rural School: 20% discount</li>
-                                <li>NGO/Trust School: 25% discount</li>
+                                <li>Student data import</li>
+                                <li>Staff data migration</li>
+                                <li>Fee structure setup</li>
+                                <li>Class & subject configuration</li>
                             </ul>
                         </div>
-                        <div class="detail-item">
+                        <div class="setup-item">
+                            <h5>🎯 Training & Demo</h5>
+                            <ul>
+                                <li>Live application demo</li>
+                                <li>Staff training sessions</li>
+                                <li>Admin panel training</li>
+                                <li>User manual & guides</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-details">
+                <h3>📋 Pricing Details</h3>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <h4>Student Pricing (per month)</h4>
+                        <ul>
+                            <li>Small School (≤300 students): ₹15/student</li>
+                            <li>Medium School (≤1000 students): ₹18/student</li>
+                            <li>Large School (≤3000 students): ₹16/student</li>
+                            <li>Enterprise School (>3000 students): ₹14/student</li>
+                        </ul>
+                    </div>
+                    <div class="detail-item">
+                        <h4>School Type Discounts</h4>
+                        <ul>
+                            <li>Regular Private School: No discount</li>
+                            <li>Rural School: 20% discount</li>
+                            <li>NGO/Trust School: 25% discount</li>
+                        </ul>
+                    </div>
+                                            <div class="detail-item">
                             <h4>Additional Features</h4>
                             <ul>
                                 <li>First 15 staff: Free</li>
                                 <li>Additional staff: ₹5/staff/month</li>
                                 <li>Yearly billing: 15% discount</li>
                                 <li>SMS: ₹0.10 per SMS</li>
+                                <li>One-time setup: ₹30,000 (Regular)</li>
+                                <li>One-time setup: ₹20,000 (Rural)</li>
+                                <li>One-time setup: ₹15,000 (NGO/Trust)</li>
                             </ul>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
-
-    
 
     </div>
 
@@ -700,6 +1119,28 @@
                     <div>💡 <span class="savings">Yearly Plan:</span> Pay ₹${yearlyTotal.toLocaleString()} once for 12 months</div>
                     <div style="font-size: 0.8rem; margin-top: 5px;">Instead of ₹${monthlyTotal.toLocaleString()} if paid monthly (₹${monthlyPrice.toLocaleString()} × 12)</div>
                 `;
+            }
+            
+            // Update one-time setup fee based on school type
+            const setupCostElement = document.querySelector('.setup-cost h4');
+            if (setupCostElement) {
+                const schoolType = document.getElementById('schoolType').value;
+                let setupFee = 30000; // Base fee
+                
+                switch(schoolType) {
+                    case 'rural':
+                        setupFee = 20000; // 33% discount for rural schools
+                        break;
+                    case 'ngo':
+                        setupFee = 15000; // 50% discount for NGO/Trust schools
+                        break;
+                    case 'regular':
+                    default:
+                        setupFee = 30000; // Regular private schools
+                        break;
+                }
+                
+                setupCostElement.innerHTML = `One-Time Setup Cost: ₹${setupFee.toLocaleString()}`;
             }
             
             
