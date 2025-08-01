@@ -1649,10 +1649,10 @@
                     <div class="detail-item">
                         <h4>Student Pricing (per month)</h4>
                         <ul>
-                            <li>Small School (≤300 students): ₹15/student</li>
-                            <li>Medium School (≤1000 students): ₹18/student</li>
-                            <li>Large School (≤3000 students): ₹16/student</li>
-                            <li>Enterprise School (>3000 students): ₹14/student</li>
+                            <li>Small School (≤500 students): ₹25/student</li>
+                            <li>Medium School (≤1500 students): ₹24/student</li>
+                            <li>Large School (≤3000 students): ₹22/student</li>
+                            <li>Enterprise School (>3000 students): ₹20/student</li>
                         </ul>
                     </div>
                     <div class="detail-item">
@@ -1670,7 +1670,7 @@
                                 <li>Additional staff: ₹5/staff/month</li>
                                 <li>Yearly billing: 15% discount</li>
                                 <li>SMS: ₹0.10 per SMS</li>
-                                <li>One-time setup: ₹20,000-40,000</li>
+                                <li>One-time setup: ₹20,000-45,000</li>
                                 <li>Setup varies by school size & type</li>
                                 <li>Rural: 20% discount, NGO: 40% discount</li>
                             </ul>
@@ -1718,7 +1718,7 @@
                         <div class="support-details">
                             <div class="support-feature">
                                 <span class="feature-name">Monthly Cost:</span>
-                                <span class="feature-value">₹5,000/month</span>
+                                <span class="feature-value">₹6,000/month</span>
                             </div>
                             <div class="support-feature">
                                 <span class="feature-name">Free Period:</span>
@@ -1745,7 +1745,7 @@
                 </div>
                 
                 <div class="support-note">
-                    <p><strong>Note:</strong> Email support is free with all plans. Live chat support (₹800/month) and maintenance (₹5,000/month) are additional charges apart from student payments. Setup costs are one-time additional charges.</p>
+                    <p><strong>Note:</strong> Email support is free with all plans. Live chat support (₹800/month) and maintenance (₹6,000/month) are additional charges apart from student payments. Setup costs are one-time additional charges.</p>
                 </div>
             </div>
         </div>
@@ -1755,14 +1755,14 @@
     <script>
         class SchoolERPPricingCalculator {
             constructor() {
-                this.pricingTiers = {
-                    studentBased: {
-                        small: { price: 15, maxStudents: 300 },
-                        medium: { price: 18, maxStudents: 1000 },
-                        large: { price: 16, maxStudents: 3000 },
-                        enterprise: { price: 14, maxStudents: Infinity }
-                    }
-                };
+                            this.pricingTiers = {
+                studentBased: {
+                    small: { price: 25, maxStudents: 500 },
+                    medium: { price: 24, maxStudents: 1500 },
+                    large: { price: 22, maxStudents: 3000 },
+                    enterprise: { price: 20, maxStudents: Infinity }
+                }
+            };
 
                 this.addonModules = {
                     sms: { price: 0.10, type: 'per_sms' },
@@ -1781,9 +1781,9 @@
             calculateBasePrice(studentCount) {
                 let pricePerStudent = 0;
                 
-                if (studentCount <= 300) {
+                if (studentCount <= 500) {
                     pricePerStudent = this.pricingTiers.studentBased.small.price;
-                } else if (studentCount <= 1000) {
+                } else if (studentCount <= 1500) {
                     pricePerStudent = this.pricingTiers.studentBased.medium.price;
                 } else if (studentCount <= 3000) {
                     pricePerStudent = this.pricingTiers.studentBased.large.price;
@@ -2017,12 +2017,16 @@
                 // Adjust base fee based on student count
                 if (studentCount <= 300) {
                     baseSetupFee = 20000; // Small schools
+                } else if (studentCount <= 500) {
+                    baseSetupFee = 25000; // Medium-small schools
+                } else if (studentCount <= 750) {
+                    baseSetupFee = 30000; // Medium schools
                 } else if (studentCount <= 1000) {
-                    baseSetupFee = 25000; // Medium schools
-                } else if (studentCount <= 2000) {
-                    baseSetupFee = 30000; // Large schools
+                    baseSetupFee = 35000; // Large-medium schools
+                } else if (studentCount <= 1500) {
+                    baseSetupFee = 40000; // Large schools
                 } else {
-                    baseSetupFee = 40000; // Enterprise schools
+                    baseSetupFee = 45000; // Enterprise schools
                 }
                 
                 // Apply school type discount
